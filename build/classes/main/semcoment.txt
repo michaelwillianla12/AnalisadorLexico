@@ -1,0 +1,16 @@
+int x =7;
+char y = 10*147;
+int car;
+double ab != 77;
+if( xdddd > 1.0 ){
+
+boolean b = 10;
+
+}
+
+
+
+boolean internet = true;
+
+for(int i=0; i > 10; i++){
+}
