@@ -15,7 +15,6 @@ import java.util.List;
 public class Main {
 
     private String pa;
-    private final ArrayList<String> aPalavras = new ArrayList<>();
     private final ArrayList<String> pr;
     private int id = 0;
     private final StringBuilder sb = new StringBuilder();
@@ -103,10 +102,6 @@ public class Main {
                 alim();
             }
         }
-       // showPalavras(aPalavras);
-     //  System.out.println("Pares <token,lexema> \n"+ tokens);
-        aPalavras.clear();
-
     }
 
     public void alim() {
@@ -116,42 +111,41 @@ public class Main {
         // adiciona o conteúdo concatenado na string "pa"
         pa = sb.toString();
 
-        boolean x = verPalavraReservada(pa, pr,e);
+        boolean x = verPalavraReservada(pa, pr, e);
         if (x == false) {
 
             if (pa.equals("<") || pa.equals("<=") || pa.equals("==") || pa.equals("!=") || pa.equals(">=") || pa.equals(">")) {
-                aPalavras.add("[​Relational_Op, " + pa + "]");
+
                 e.setToken("Relational_Op");
                 e.setLexema(pa);
                 tokens.add(e);
             } else if (pa.matches("^[0-9]*$") && (!pa.isEmpty())) {
 
-                aPalavras.add("[num, " + pa + "]");
                 e.setToken("Num");
                 e.setLexema(pa);
                 tokens.add(e);
             } else if (pa.equals("=")) {
-                aPalavras.add("[​Equal_Op, " + pa + "]");
+
                 e.setToken("Equal_Op");
                 e.setLexema(pa);
                 tokens.add(e);
 
             } else if (pa.equals("*") || pa.equals("+") || pa.equals("/") || pa.equals("-")) {
-                aPalavras.add("[​Arith_​Op, " + pa + "]");
+
                 e.setToken("Arith_​Op");
                 e.setLexema(pa);
                 tokens.add(e);
             } else if (!pa.isEmpty()) {
 
                 if (pa.contains(".")) {
-                    aPalavras.add("[​num, " + pa + "]");
+
                     e.setToken("Num");
                     e.setLexema(pa);
                     tokens.add(e);
 
                 } else {
                     id++;
-                    aPalavras.add("[​id, " + id + "]");
+
                     e.setToken("id");
                     e.setLexema((String.valueOf(id)));
                     tokens.add(e);
@@ -170,10 +164,10 @@ public class Main {
         for (int i = 0; i < pr.size(); i++) {
 
             if (palavra.equals(pr.get(i))) {
-                aPalavras.add("[reserved_word, " + palavra + "]");
-                  e.setToken("reserved_word");
-                    e.setLexema(palavra);
-                    tokens.add(e);
+
+                e.setToken("reserved_word");
+                e.setLexema(palavra);
+                tokens.add(e);
                 return true;
             }
 
@@ -181,22 +175,7 @@ public class Main {
         return false;
     }
 
-    //MÉTODO DE SAÍDA "toString()"
-    public void showPalavras(ArrayList<String> pal) {
-
-        for (int i = 0; i < pal.size(); i++) {
-
-            System.out.print(pal.get(i));
-
-            if (pal.size() - 1 == i) {
-                System.out.println();
-            }
-
-        }
-
-    }
-    
-     public List<Elemento> getTokens(){
+    public List<Elemento> getTokens() {
         return tokens;
     }
 
