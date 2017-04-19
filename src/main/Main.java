@@ -119,8 +119,8 @@ public class Main {
                 e.setToken("Relational_Op");
                 e.setLexema(pa);
                 tokens.add(e);
-            } else if (pa.matches("^[0-9]*$") && (!pa.isEmpty())) {
-
+            } else if (pa.matches("^\\d+|^\\d+\\.?\\d+")  && (!pa.isEmpty())) {
+                
                 e.setToken("Num");
                 e.setLexema(pa);
                 tokens.add(e);
@@ -137,19 +137,13 @@ public class Main {
                 tokens.add(e);
             } else if (!pa.isEmpty()) {
 
-                if (pa.contains(".")) {
-
-                    e.setToken("Num");
-                    e.setLexema(pa);
-                    tokens.add(e);
-
-                } else {
+             
                     id++;
 
                     e.setToken("id");
                     e.setLexema((String.valueOf(id)));
                     tokens.add(e);
-                }
+                
             }
         }
 
