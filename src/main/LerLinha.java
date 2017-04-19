@@ -62,6 +62,8 @@ public class LerLinha {
                     main.exec(conteudoLinha);
                     conteudoLinha.clear();
                 }
+                
+               System.out.println( main.getTokens());
 
                 break;
 

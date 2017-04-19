@@ -44,3 +44,5 @@ super
 while
 true
 false
+String
+main

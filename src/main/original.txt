@@ -1,23 +1,27 @@
-int x =7;
-char y = 10*147;
-int car;
-double ab != 77;
-if( xdddd > 1.0 ){
+public class Primo {
+    public static void main(String [] args) {
+        int primo = args[0];
+        boolean isPrimo = true;
+            int divisor = 0;
+               //comentário 12345     
+                    for (int i = 2; i <= primo; i++) {
+                        if ( ( (primo % i) == 0) && (i != primo) ) {
+                                isPrimo = false;
+                                divisor = i;
+                                break;
+                    }
+                }
 
-boolean b = 10;
+                /* teste
+                   de
+                   comentário
+                   */
 
-}
-
-//vamos testar isso
-
-/*teste de comentarios de várias linhas
-aqui
-um
-comentário
- 
-int x= 13;
-boolean internet = true; */
-boolean internet = true;
-
-for(int i=0; i > 10; i++){
+                if (isPrimo) {
+                    System.out.println( "é Primo" );
+                    } 
+                    else {
+                        System.out.println( "Não é Primo --> " + divisor );
+                }
+        }
 }

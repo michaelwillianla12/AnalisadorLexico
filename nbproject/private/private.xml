@@ -5,11 +5,11 @@
         <group>
             <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/Main.java</file>
             <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/Tratativas.java</file>
+            <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/Elemento.java</file>
             <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/reservadas.txt</file>
             <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/LerLinha.java</file>
             <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/original.txt</file>
             <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/RemoveBlank.java</file>
-            <file>file:/C:/Users/Michael%20M/Documents/NetBeansProjects/AnalisadorLexico/src/main/AnaliseLexica.java</file>
         </group>
     </open-files>
 </project-private>
