@@ -39,7 +39,7 @@ public class LerLinha {
         original = new BufferedReader(new FileReader("C:\\Users\\Michael M\\Documents\\NetBeansProjects\\AnalisadorLexico\\src\\main\\original.txt"));
         prepara(original);
 
-        //Este arquivo já está sem os comentários
+        //Este arquivo já está sem os comentários e agora será tratado
         br = new BufferedReader(new FileReader("C:\\Users\\Michael M\\Documents\\NetBeansProjects\\AnalisadorLexico\\src\\main\\semcoment.txt"));
 
         Scanner scan = new Scanner(System.in);
